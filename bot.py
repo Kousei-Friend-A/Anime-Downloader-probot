@@ -61,4 +61,4 @@ def main():
 
 # Calling main method and handlers, polling state
 if __name__ == '__main__':
-    bot.run(main())
+    bot.run()
