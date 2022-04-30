@@ -1,0 +1,18 @@
+name: Mention All Bot Heroku Deploy
+
+on: workflow_dispatch
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - uses: akhileshns/heroku-deploy@v3.12.12
+        with:
+          heroku_api_key: "037cba8f-aabe-4381-9428-82f65f39c4b2"
+          heroku_app_name: "mywaifubot12"
+          heroku_email: "manu.weeb016@gmail.com"
+        env:
+          HD_APP_ID: ${{secrets.APP_ID}}
+          HD_API_HASH: ${{secrets.API_HASH}}
+          HD_TG_BOT_TOKEN: ${{secrets.TG_BOT_TOKEN}}
